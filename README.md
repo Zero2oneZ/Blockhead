@@ -59,21 +59,20 @@ launch_solominer.bat     # Windows
 
 ## Mining Difficulty Levels
 
-| Level | Name | Description |
-|-------|------|-------------|
-| 0 | Demo Mode | Educational demonstration |
-| 1 | Beginner | Very easy for testing |
-| 2 | Easy | Low difficulty |
-| 3 | Light | Light computational load |
-| 4 | Standard | Standard solo mining |
-| 5 | Moderate | Moderate difficulty |
-| 6 | Intermediate | Intermediate challenge |
-| 7 | Advanced | Advanced operations |
-| 8 | Expert | Expert level |
-| 9 | Professional | Professional simulation |
-| 10 | Extreme | Extreme difficulty |
-| 11 | Ultra | Ultra high difficulty |
-| 12 | Maximum | Real BTC level simulation |
+Probability of N leading zeros: `(1/16)^N`
+
+| Level | Name | Target Zeros | Probability | Avg Hashes Needed |
+|-------|------|--------------|-------------|-------------------|
+| 0 | Demo Mode | 1 | 1 in 16 | 16 |
+| 1-2 | Beginner/Easy | 2 | 1 in 256 | 256 |
+| 3-4 | Light/Standard | 3 | 1 in 4,096 | 4,096 |
+| 5-6 | Moderate/Intermediate | 4 | 1 in 65,536 | 65,536 |
+| 7-8 | Advanced/Expert | 5 | 1 in 1,048,576 | ~1M |
+| 9-10 | Professional/Extreme | 6 | 1 in 16,777,216 | ~17M |
+| 11 | Ultra | 7 | 1 in 268,435,456 | ~268M |
+| 12 | Maximum | 8 | 1 in 4,294,967,296 | ~4.3B |
+
+**Note**: 7 zeros achieved = 1 in 268 million probability!
 
 ## Project Structure
 

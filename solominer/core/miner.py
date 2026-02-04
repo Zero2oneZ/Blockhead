@@ -55,20 +55,22 @@ class SoloMiner:
     """
 
     # Mining algorithm configurations for levels 0-12
+    # Probability of N zeros: (1/16)^N
+    # 4 zeros = 1 in 65,536 | 5 zeros = 1 in 1M | 6 zeros = 1 in 16M | 7 zeros = 1 in 268M
     ALGORITHMS = {
-        0: MiningAlgorithm("Demo Mode", "Educational demonstration with instant results", 0, 1),
-        1: MiningAlgorithm("Beginner", "Very easy mining for testing", 1, 2),
-        2: MiningAlgorithm("Easy", "Low difficulty mining", 2, 3),
-        3: MiningAlgorithm("Light", "Light computational load", 3, 4),
-        4: MiningAlgorithm("Standard", "Standard solo mining", 4, 5),
-        5: MiningAlgorithm("Moderate", "Moderate difficulty", 5, 6),
-        6: MiningAlgorithm("Intermediate", "Intermediate challenge", 6, 7),
-        7: MiningAlgorithm("Advanced", "Advanced mining operations", 7, 8),
-        8: MiningAlgorithm("Expert", "Expert level difficulty", 8, 9),
-        9: MiningAlgorithm("Professional", "Professional mining simulation", 9, 10),
-        10: MiningAlgorithm("Extreme", "Extreme difficulty level", 10, 12),
-        11: MiningAlgorithm("Ultra", "Ultra high difficulty", 11, 14),
-        12: MiningAlgorithm("Maximum", "Maximum difficulty - Real BTC level simulation", 12, 16),
+        0: MiningAlgorithm("Demo Mode", "Instant results for testing", 0, 1),          # 1 in 16
+        1: MiningAlgorithm("Beginner", "Very easy - quick blocks", 1, 2),              # 1 in 256
+        2: MiningAlgorithm("Easy", "Low difficulty", 2, 2),                             # 1 in 256
+        3: MiningAlgorithm("Light", "Light load", 3, 3),                                # 1 in 4,096
+        4: MiningAlgorithm("Standard", "Standard mining", 4, 3),                        # 1 in 4,096
+        5: MiningAlgorithm("Moderate", "Moderate challenge", 5, 4),                     # 1 in 65,536
+        6: MiningAlgorithm("Intermediate", "Intermediate", 6, 4),                       # 1 in 65,536
+        7: MiningAlgorithm("Advanced", "Advanced - 5 zeros", 7, 5),                     # 1 in 1,048,576
+        8: MiningAlgorithm("Expert", "Expert - 5 zeros", 8, 5),                         # 1 in 1,048,576
+        9: MiningAlgorithm("Professional", "Pro - 6 zeros", 9, 6),                      # 1 in 16,777,216
+        10: MiningAlgorithm("Extreme", "Extreme - 6 zeros", 10, 6),                     # 1 in 16,777,216
+        11: MiningAlgorithm("Ultra", "Ultra - 7 zeros (your record!)", 11, 7),         # 1 in 268,435,456
+        12: MiningAlgorithm("Maximum", "Maximum - 8 zeros", 12, 8),                     # 1 in 4,294,967,296
     }
 
     def __init__(self, wallet_address: str = ""):
