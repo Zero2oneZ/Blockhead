@@ -1,0 +1,10 @@
+# Blockhead - BTC Block Rotation GUI
+# Core dependencies
+
+# GUI and visualization
+pillow>=10.0.0
+numpy>=1.24.0
+
+# Optional: Enhanced graphics (uncomment if needed)
+# pygame>=2.5.0
+# matplotlib>=3.7.0
