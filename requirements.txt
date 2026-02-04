@@ -1,0 +1,17 @@
+# SoloMiner GUI Dependencies
+# Core GUI
+customtkinter>=5.2.0
+Pillow>=10.0.0
+
+# Bitcoin/Crypto
+bitcoinlib>=0.6.14
+mnemonic>=0.20
+ecdsa>=0.18.0
+hashlib-compat>=1.0.1
+
+# Utilities
+requests>=2.31.0
+rich>=13.7.0
+
+# Optional: For enhanced graphics
+matplotlib>=3.8.0
